@@ -38,6 +38,10 @@ public class CustomerService {
                 customer.getEmail(),
                 String.format("Hi %s, welcome to my Application", customer.getFirstName())
         );
-        rabbitMQMessageProducer.publish(notificationRequest, "internal.exchange", "internal.notification.routing-key");
+        rabbitMQMessageProducer.publish(
+                notificationRequest,
+                "internal.exchange",
+                "internal.notification.routing-key"
+        );
     }
 }

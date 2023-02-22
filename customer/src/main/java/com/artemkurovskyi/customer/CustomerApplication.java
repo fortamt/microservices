@@ -11,7 +11,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
                 "com.artemkurovskyi.customer"
                 })
 @EnableEurekaClient
-@EnableFeignClients(basePackages = "com.artemkurovskyi.clients")
+@EnableFeignClients(
+        basePackages = "com.artemkurovskyi.clients")
 public class CustomerApplication {
     public static void main(String[] args) {
         SpringApplication.run(CustomerApplication.class, args);
